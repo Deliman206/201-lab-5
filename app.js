@@ -55,19 +55,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
-// TODO: Write your code here
-// function sumAndMultiply(a, b, c) {
-//   var sumAB = sum(a,b);
-//   var sumABC = sum(sumAB,c);
-//   var multAB = multiply(a,b);
-//   var multABC = multiply(multAB,c);
-//   var msgSum = a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC + '.';
-//   var msgMult = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multABC + '.';
-//   return [sumABC,multABC,msgSum,msgMult];
-// }
+// DONE: Write your code here
+function sumAndMultiply(a, b, c) {
+  var sumAB = sum(a,b);
+  var sumABC = sum(sumAB[0],c);
+  var multAB = multiply(a,b);
+  var multABC = multiply(multAB[0],c);
+  var msgSum = a + ' and ' + b + ' and ' + c + ' sum to ' + sumABC[0] + '.';
+  var msgMult = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multABC[0] + '.';
+  return [sumABC[0],multABC[0],msgSum,msgMult];
+}
 
-// TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+// DONE: Here is the test for sumAndMultiply(); uncomment it to run it
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
