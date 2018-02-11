@@ -121,19 +121,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-// function multiplyArray(testArray) { 
-//   var totalMult = 1;
-//   var msg = 'The numbers ' + testArray + ' have a product of 24.'
-//   for (var i = 0; i < testArray.length; i++){
-//     var num = testArray[i]
-//     totalMult = multiply(totalMult,num);
-//   }
+function multiplyArray(testArray) { 
+  var totalMult = 1;
+  var msg = 'The numbers ' + testArray + ' have a product of 24.'
+  for (var i = 0; i < testArray.length; i++){
+    var num = testArray[i]
+    totalMult = multiply(totalMult,num);
+  }
 
-//   return [totalMult, msg]
+  return [totalMult, msg]
   
-// }
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-//  testMultiplyArray(2,3,4);
+  testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
