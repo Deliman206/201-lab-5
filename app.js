@@ -12,9 +12,9 @@ For TODO item, be sure to change it to say DONE when you have successfully compl
 
 // DONE: Write your code here
 function sum(a, b) { 
-  var theSum = a + b;
-  var message = 'The sum of ' + a + ' and ' + b + ' is ' + theSum + '.';
-  return [theSum, message];
+  var total = a + b;
+  var message = 'The sum of ' + a + ' and ' + b + ' is ' + total + '.';
+  return [total, message];
 }
 
 // DONE: Here is the test for sum(); uncomment it to run it
@@ -81,15 +81,32 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
-// TODO: Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+// DONE: Write your code here
+// Both function work, with the "for" loop and without
+//Also a little extra practice with random numbers
 
-function sumArray(testArray) { //eslint-disable-line
+// console.log(testArrayAgain);
+// function sumArray(testArray) {
+//   var sumAB = sum(testArray[0], testArray[1]);
+//   var sumABC = sum(sumAB[0], testArray[2]);
+//   var msgSumABC = testArray + ' was passed in as an array of numbers, and ' + sumABC[0] + ' is their sum.';
+//   return [sumABC[0], msgSumABC];
+// }
 
+var testArray = [2, 3, 4];
+var testArrayAgain = [Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10)];
+function sumArray(testArray){
+  var totalSum = 0;
+  for (var i=0 ;i < testArray.length; i++){
+    var num = testArray[i];
+    var totalSum = sum(totalSum,num)[0];
+  }
+  var msgSumTotal = testArray + ' was passed in as an array of numbers, and ' + totalSum + ' is their sum.';
+  return[totalSum,msgSumTotal];
 }
 
-// TODO: Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+// DONE: Here is the test for sumArray(); uncomment it to run it
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -104,11 +121,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray) { //eslint-disable-line
+// function multiplyArray(testArray) { 
+//   var totalMult = 1;
+//   var msg = 'The numbers ' + testArray + ' have a product of 24.'
+//   for (var i = 0; i < testArray.length; i++){
+//     var num = testArray[i]
+//     totalMult = multiply(totalMult,num);
+//   }
 
-}
+//   return [totalMult, msg]
+  
+// }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+//  testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
